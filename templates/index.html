@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert System - Diagnosis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Disease Diagnosis System (ระบบวินิจฉัยโรค)</h2>
+        <form action="/predict" method="post" class="mt-4">
+            <div class="mb-3">
+                <label class="form-label">Fever (ไข้)</label>
+                <select name="Fever" class="form-select">
+                    <option value="1">Yes (ใช่)</option>
+                    <option value="0">No (ไม่ใช่)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cough (ไอ)</label>
+                <select name="Cough" class="form-select">
+                    <option value="1">Yes (ใช่)</option>
+                    <option value="0">No (ไม่ใช่)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fatigue (อ่อนเพลีย)</label>
+                <select name="Fatigue" class="form-select">
+                    <option value="1">Yes (ใช่)</option>
+                    <option value="0">No (ไม่ใช่)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Difficulty Breathing (หายใจลำบาก)</label>
+                <select name="Difficulty_Breathing" class="form-select">
+                    <option value="1">Yes (ใช่)</option>
+                    <option value="0">No (ไม่ใช่)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Age (อายุ)</label>
+                <input type="number" name="Age" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gender (เพศ)</label>
+                <select name="Gender" class="form-select">
+                    <option value="0">Male (ชาย)</option>
+                    <option value="1">Female (หญิง)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Blood Pressure (ความดันโลหิต)</label>
+                <select name="Blood_Pressure" class="form-select">
+                    <option value="0">Low (ต่ำ)</option>
+                    <option value="1">Normal (ปกติ)</option>
+                    <option value="2">High (สูง)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cholesterol Level (ระดับคอเลสเตอรอล)</label>
+                <select name="Cholesterol_Level" class="form-select">
+                    <option value="0">Low (ต่ำ)</option>
+                    <option value="1">Normal (ปกติ)</option>
+                    <option value="2">High (สูง)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Diagnose (วินิจฉัย)</button>
+        </form>
+    </div>
+</body>
+</html>
